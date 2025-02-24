@@ -1,0 +1,32 @@
+@use "../../scss/variables" as variables;
+
+:host {
+  padding: 200px;
+
+  @media #{variables.$phone} {
+    padding: 0 40px;
+  }
+}
+
+la-button {
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 100px;
+}
+
+p {
+  font-weight: bold;
+}
+
+h1 {
+  width: 100%;
+  font-size: 60px;
+
+  @media #{variables.$phone} {
+    font-size: 40px;
+  }
+}
+
+.email {
+  color: var(--accent);
+}

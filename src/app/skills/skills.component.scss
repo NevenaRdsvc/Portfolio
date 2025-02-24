@@ -1,0 +1,116 @@
+@use "../../scss/variables" as variables;
+
+:host {
+  padding: 0 200px;
+
+  @media #{variables.$s-desktop} {
+    padding: 0 120px;
+  }
+
+  @media #{variables.$xs-desktop} {
+    padding: 0 80px;
+  }
+
+  @media #{variables.$tablet} {
+    padding: 0 40px;
+  }
+}
+
+h3 {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  color: var(--white);
+}
+
+.skills-container {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skill-list {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style-type: none;
+  gap: 20px;
+
+  @media #{variables.$phone} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.skill-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 64px;
+  overflow: hidden;
+  padding: 0 8px;
+  border-radius: 40px;
+  background-color: var(--accent);
+  text-align: center;
+
+  @media #{variables.$phone} {
+    width: 100%;
+  }
+
+  h3 {
+    @media #{variables.$phone} {
+      font-size: 16px !important;
+    }
+  }
+}
+
+// $desktop: 1510px;
+
+// @media (max-width: #{$desktop}) {
+//   :host {
+//     padding-left: 80px;
+//   }
+// }
+
+// $xs-phone: 480px;
+
+// @media (max-width: $xs-phone) {
+//   :host {
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     padding-bottom: 10px;
+//     padding-left: 20px;
+//   }
+
+//   #typewriter-title-skills {
+//     z-index: 1;
+//     padding-top: 150px;
+//     margin-left: 20px;
+//     font-size: 50px;
+//   }
+
+//   .skill-item {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-wrap: wrap;
+//     width: 120px;
+//     height: 50px;
+//     font-size: 14px;
+//     word-wrap: break-word;
+//     text-align: center;
+//   }
+
+//   .skill-list {
+//     justify-content: center;
+//     align-items: center;
+//     flex-wrap: wrap;
+//     gap: 10px;
+//   }
+
+//   h3 {
+//     font-size: 14px;
+//   }
+// }

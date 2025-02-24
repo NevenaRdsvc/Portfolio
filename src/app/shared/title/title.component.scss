@@ -1,0 +1,29 @@
+@use "../../../scss/variables" as variables;
+
+:host {
+  flex-direction: column;
+  text-align: center;
+
+  .number {
+    margin: 0;
+    font-family: "Montserrat", serif;
+    font-size: 200px;
+    font-weight: bold;
+    color: var(--alt);
+
+    @media #{variables.$tablet} {
+      font-size: 140px;
+    }
+  }
+
+  h1 {
+    padding: 0;
+    margin: 0;
+  }
+
+  h2 {
+    padding: 0;
+    margin: 0;
+    color: var(--black);
+  }
+}

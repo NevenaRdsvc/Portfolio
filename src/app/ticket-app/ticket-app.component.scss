@@ -1,0 +1,92 @@
+@use "../../scss/variables" as variables;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+
+  @media #{variables.$s-desktop} {
+    padding: 0 120px;
+  }
+
+  @media #{variables.$xs-desktop} {
+    padding: 0 80px;
+  }
+
+  @media #{variables.$tablet} {
+    padding: 0 40px;
+  }
+}
+
+.main-image {
+  width: 70%;
+
+  @media #{variables.$phone} {
+    width: 100%;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 40px;
+
+  @media #{variables.$tablet} {
+    flex-direction: column;
+    max-width: none;
+  }
+
+  img {
+    width: 500px;
+    object-fit: contain;
+
+    @media #{variables.$tablet} {
+      width: 300px;
+    }
+  }
+}
+
+.colors-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  img {
+    width: 330px;
+    object-fit: contain;
+    padding-top: 40px;
+    margin-left: 0;
+
+    @media #{variables.$tablet} {
+      align-self: center;
+    }
+
+    @media #{variables.$phone} {
+      width: 250px;
+    }
+  }
+
+  p {
+    width: 800px;
+    text-align: justify;
+    margin: 0;
+
+    @media #{variables.$tablet} {
+      width: 100%;
+    }
+  }
+}
+
+.ticket-image {
+  width: 70%;
+
+  @media #{variables.$phone} {
+    width: 100%;
+  }
+}

@@ -1,0 +1,14 @@
+@use "../../scss/variables" as variables;
+
+.square {
+  bottom: 0;
+  display: flex;
+  width: 140%;
+  padding: 60px;
+  margin-left: -200px;
+  background-color: var(--black);
+
+  @media #{variables.$phone} {
+    margin-left: 0;
+  }
+}

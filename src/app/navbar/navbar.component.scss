@@ -1,0 +1,57 @@
+@use "../../scss/variables" as variables;
+
+:host {
+  z-index: 2;
+  padding: 20px;
+  margin: 10px 30px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+
+  @media #{variables.$tablet} {
+    display: none;
+  }
+}
+
+.navbar-link {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--black);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navbar-link:hover {
+  color: var(--white);
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  span {
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .divider {
+    cursor: auto;
+  }
+}

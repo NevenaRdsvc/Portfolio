@@ -1,0 +1,44 @@
+<la-hero></la-hero>
+
+<la-about-me></la-about-me>
+
+<la-experience></la-experience>
+
+<la-skills></la-skills>
+
+<div id="projects" class="title-aurora">
+  <img class="aurora-image-3" src="assets/images/aurora.png" alt="Aurora">
+  <div class="wrapper">
+    <h1 id="titleProjects" class="project-title">{{ 'labelMain.projectTitle' | translate }}</h1>
+
+    <div class="buttons-wrapper">
+      <button
+        [class.active-button]="projectsActiveType === 'websites'"
+        [disabled]="projectsActiveType === 'websites'"
+        (click)="redirect('websites')">
+        Web & Mobile
+      </button>
+
+      <button
+        [class.active-button]="projectsActiveType === 'illustrations'"
+        [disabled]="projectsActiveType === 'illustrations'"
+        (click)="redirect('illustrations')">
+        Posts & Illustrations
+      </button>
+
+      <button
+        [class.active-button]="projectsActiveType === 'video-editing'"
+        [disabled]="projectsActiveType === 'video-editing'"
+        (click)="redirect('video-editing')">
+        Video Editing
+      </button>
+    </div>
+  </div>
+  <img class="aurora-image-4" src="assets/images/aurora.png" alt="Aurora 2">
+</div>
+
+<router-outlet></router-outlet>
+
+<la-contact></la-contact>
+
+<la-footer></la-footer>

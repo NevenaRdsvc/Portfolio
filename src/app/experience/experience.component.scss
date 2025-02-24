@@ -1,0 +1,24 @@
+@use "../../scss/variables" as variables;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 0 200px;
+
+  @media #{variables.$s-desktop} {
+    padding: 0 120px;
+  }
+
+  @media #{variables.$xs-desktop} {
+    padding: 0 80px;
+  }
+
+  @media #{variables.$tablet} {
+    padding: 0 40px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}

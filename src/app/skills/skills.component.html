@@ -1,0 +1,11 @@
+<h1 id="typewriter-title-skills" [class.fade-in-left]="isIntersecting"></h1>
+
+<div class="skill-container" [class.fade-in-left]="isIntersecting">
+  <ul class="skill-list">
+    @for (skill of skills; track skill) {
+      <li class="skill-item">
+        <h3 class="skill">{{ skill.name | translate}}</h3>
+      </li>
+    } 
+  </ul>
+</div>

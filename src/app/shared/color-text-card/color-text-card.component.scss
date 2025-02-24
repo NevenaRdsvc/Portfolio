@@ -1,0 +1,36 @@
+@use "../../../scss/variables" as variables;
+
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 190px;
+
+  @media #{variables.$tablet} {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.colors {
+  object-fit: contain;
+
+  @media #{variables.$tablet} {
+    order: 1;
+    width: 250px;
+  }
+}
+
+h3 {
+  color: var(--black);
+}
+
+p {
+  max-width: 800px;
+  color: var(--black);
+  text-align: justify;
+
+  @media #{variables.$tablet} {
+    width: 100%;
+  }
+}

@@ -1,0 +1,80 @@
+@use "../../scss/variables" as variables;
+
+:host {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.title-aurora {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+
+  @media #{variables.$s-desktop} {
+    height: 400px;
+  }
+
+  .aurora-image-3 {
+    z-index: 1;
+    width: 1250px;
+    rotate: 130deg;
+
+    @media #{variables.$phone} {
+      width: 350px;
+      rotate: 180deg;
+    }
+  }
+
+  .aurora-image-4 {
+    z-index: 1;
+    width: 1250px;
+    rotate: 100deg;
+
+    @media #{variables.$phone} {
+      width: 350px;
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-wrapper {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    box-sizing: border-box;
+    padding: 20px 16px;
+    border: 2px solid var(--accent);
+    border-radius: 20px;
+    color: var(--accent);
+    background-color: var(--white);
+
+    @media #{variables.$phone} {
+      width: 110px;
+      padding: 12px 16px;
+    }
+  }
+
+  .active-button {
+    border: none;
+    color: var(--white);
+    background-color: var(--accent);
+  }
+}

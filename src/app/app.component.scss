@@ -1,0 +1,32 @@
+@use "../scss/mixins" as mixins;
+
+@use "../scss/variables" as variables;
+
+:host {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/assets/images/grid.png");
+  background-position: top left;
+  background-size: auto;
+  @include mixins.scrollbar;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+.loading-overlay {
+  position: fixed;
+  left: 0;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark-blue);
+}
