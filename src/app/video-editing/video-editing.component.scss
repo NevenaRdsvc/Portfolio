@@ -1,35 +1,35 @@
-@use "../../scss/variables" as variables;
+// @use "../../scss/variables" as variables;
 
-.video-container {
-  flex-direction: column;
-}
+// .video-container {
+//   flex-direction: column;
+// }
 
-.video-container video {
-  max-width: 400px;
-  width: 100%;
-  height: auto;
-  border-radius: 60px;
+// .video-container video {
+//   max-width: 400px;
+//   width: 100%;
+//   height: auto;
+//   border-radius: 60px;
 
-  @media #{variables.$phone} {
-    max-width: 310px;
-  }
-}
+//   @media #{variables.$phone} {
+//     max-width: 310px;
+//   }
+// }
 
-.wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: auto;
-  margin-top: -180px;
-  margin-bottom: -180px;
-  gap: 50px;
+// .wrapper {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+//   margin: auto;
+//   margin-top: -180px;
+//   margin-bottom: -180px;
+//   gap: 50px;
 
-  @media #{variables.$phone} {
-    flex-direction: column;
-    height: auto;
-    margin-top: 20px;
-    margin-bottom: 0;
-    gap: 20px;
-  }
-}
+//   @media #{variables.$phone} {
+//     flex-direction: column;
+//     height: auto;
+//     margin-top: 20px;
+//     margin-bottom: 0;
+//     gap: 20px;
+//   }
+// }
