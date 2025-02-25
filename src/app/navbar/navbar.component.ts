@@ -23,11 +23,11 @@ export class NavbarComponent {
   constructor(private translateService: TranslateService) { }
 
 
-  changeLanguage(language: 'en' | 'rs') {
+  changeLanguage(language: 'en' | 'rs' | 'ger') {
     this.translateService.setDefaultLang(language);
     localStorage.setItem(LS_USER_LANGUAGE, language);
     this.translateService.use(language);
-  }
+  }  
 
 
   goToSection(sectionId: string) {
