@@ -22,7 +22,7 @@
 
 h1 {
   @media #{variables.$phone} {
-    margin-top: 240px;
+    margin-top: 240px; /* Ovaj margin-top pomera h1 naslov dalje od prethodne sekcije */
   }
 }
 
@@ -40,6 +40,7 @@ h1 {
   @media #{variables.$phone} {
     padding: 0;
     margin: 0;
+    margin-bottom: 40px; /* Dodajte razmak između wrappera i sledeće komponente */
   }
 }
 
