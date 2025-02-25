@@ -9,6 +9,7 @@
   width: 100vw;
   height: 100vh;
   background-image: url("/assets/images/grid.png");
+  background-color: #ededed;
   background-position: top left;
   background-size: auto;
   @include mixins.scrollbar;

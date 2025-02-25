@@ -8,8 +8,8 @@ import { ContactComponent } from '../contact/contact.component';
 import { ExperienceComponent } from '../experience/experience.component';
 import { FooterComponent } from '../footer/footer.component';
 import { HeroComponent } from '../hero/hero.component';
-import { SkillsComponent } from '../skills/skills.component';
 import { TranslatePipe } from '@ngx-translate/core';
+import { SkillComponent } from '../skill/skill.component';
 
 @Component({
   selector: 'la-home',
@@ -17,11 +17,11 @@ import { TranslatePipe } from '@ngx-translate/core';
     RouterOutlet,
     AboutMeComponent,
     ExperienceComponent,
-    SkillsComponent,
     HeroComponent,
     FooterComponent,
     ContactComponent,
-    TranslatePipe
+    TranslatePipe,
+    SkillComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

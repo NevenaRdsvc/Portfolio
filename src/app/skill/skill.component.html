@@ -1,0 +1,54 @@
+<div class="wrapper">
+    <h1 id="typewriter-title-skills">Skills</h1>
+    
+    <div class="tp-wrapper">
+      <div class="tp-box" 
+          (mouseenter)="skills[0].flip = 'active'" 
+          (mouseleave)="skills[0].flip = 'inactive'" 
+          [@flipState]="skills[0].flip">
+          
+        <div class="tp-box-side tp-box-front">
+          <img [src]="skills[0].icon" alt="{{ skills[0].name }}">
+          <p>{{ skills[0].name }}</p>
+        </div>
+  
+        <div class="tp-box-side tp-box-back">
+            <h3 class="box-h3"  [innerHtml]="'Design'"></h3>
+          <p class="box-p" [innerHtml]="'Adobe Photoshop <br> Illustrator <br> Figma <br> Blender <br> Krita'"></p>
+        </div>
+      </div>
+  
+      <div class="tp-box" 
+          (mouseenter)="skills[1].flip = 'active'" 
+          (mouseleave)="skills[1].flip = 'inactive'" 
+          [@flipState]="skills[1].flip">
+          
+        <div class="tp-box-side tp-box-front">
+          <img [src]="skills[1].icon" alt="{{ skills[1].name }}">
+          <p>{{ skills[1].name }}</p>
+        </div>
+  
+        <div class="tp-box-side tp-box-back">
+            <h3 class="box-h3"  [innerHtml]="'Media Production'"></h3>
+          <p [innerHtml]="'Video Editing <br> After Effects <br> Da Vinchi'"></p>
+        </div>
+      </div>
+  
+      <div class="tp-box" 
+          (mouseenter)="skills[2].flip = 'active'" 
+          (mouseleave)="skills[2].flip = 'inactive'" 
+          [@flipState]="skills[2].flip">
+          
+        <div class="tp-box-side tp-box-front">
+          <img [src]="skills[2].icon" alt="{{ skills[2].name }}">
+          <p>{{ skills[2].name }}</p>
+        </div>
+  
+        <div class="tp-box-side tp-box-back">
+            <h3 class="box-h3"  [innerHtml]="'Development'"></h3>
+          <p [innerHtml]="'HTML <br> CSS <br> Java Script <br> Angular <br> C#'"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
