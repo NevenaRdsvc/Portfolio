@@ -13,7 +13,6 @@ import Typewriter from 'typewriter-effect/dist/core';
 export class AboutMeComponent implements OnInit {
   isIntersecting: boolean = false;
 
-  // Do injection as it is done in app.component with constructor
   private observer: IntersectionObserver | null = null;
 
   constructor(private host: ElementRef, private translate: TranslateService) {

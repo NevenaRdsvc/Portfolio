@@ -30,28 +30,40 @@
 }
 
 .navbar-link {
+  position: relative;
   font-size: 18px;
   font-weight: bold;
   color: var(--black);
   text-decoration: none;
-  transition: color 0.2s;
 }
 
-.navbar-link:hover {
-  color: var(--white);
+.navbar-link::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--black);
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover::before {
+  width: 100%;
 }
 
 .language-selector {
   display: flex;
   align-items: center;
   gap: 8px;
+}
 
-  span {
-    font-weight: 600;
-    cursor: pointer;
-  }
+.language-selector span {
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
 
-  .divider {
-    cursor: auto;
-  }
+.language-selector span:hover {
+  color: var(--white);
 }

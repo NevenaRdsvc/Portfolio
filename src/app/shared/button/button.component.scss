@@ -20,6 +20,10 @@ button {
   letter-spacing: 1.5px;
   transition: background-color 0.2s;
 
+  h3 {
+    color: white;
+  }
+
   &.primary {
     color: var(--accent);
     background-color: var(--accent);

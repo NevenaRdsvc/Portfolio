@@ -8,25 +8,44 @@
   }
 }
 
-la-button {
-  justify-content: flex-end;
-  align-items: center;
-  padding-right: 100px;
+.email-highlight {
+  color: var(--accent);
+}
+
+.phone-highlight {
+  color: var(--accent);
 }
 
 p {
   font-weight: bold;
+  color: var(--black);
 }
 
-h1 {
-  width: 100%;
-  font-size: 60px;
+.custom-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 70px;
+  padding: 16px 28px;
+  margin-top: 50px;
+  border: none;
+  border-radius: 40px;
+  outline: none;
+  background-color: var(--accent);
+
+  h3 {
+    font-size: 19px;
+    color: var(--white);
+    text-transform: uppercase;
+
+    @media #{variables.$phone} {
+      font-size: 15px;
+    }
+  }
 
   @media #{variables.$phone} {
-    font-size: 40px;
+    width: 190px;
+    height: 55px;
   }
-}
-
-.email {
-  color: var(--accent);
 }
