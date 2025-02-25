@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
   styleUrl: './video-editing.component.scss'
 })
 export class VideoEditingComponent {
-
 }
