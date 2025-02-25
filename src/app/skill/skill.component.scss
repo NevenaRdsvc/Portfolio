@@ -120,7 +120,7 @@ h1 {
 
 .box-h3 {
   padding-bottom: 0;
-  margin-top: 45px; /* Dodano globalno za sve veličine ekrana */
+  margin-top: 46px;
   color: #ffffff;
 
   @media #{variables.$phone} {
