@@ -15,6 +15,7 @@ export class VideoEditingComponent {
       isMuted: true,
       isLoop: true,
       isAutoplay: true,
+      hasControls:true
     },
     {
       type: "video/mp4",
@@ -22,6 +23,7 @@ export class VideoEditingComponent {
       isMuted: true,
       isLoop: true,
       isAutoplay: true,
+      hasControls:true
     },
     {
       type: "video/mp4",
@@ -30,6 +32,7 @@ export class VideoEditingComponent {
       isMuted: true,
       isLoop: false,
       isAutoplay: false,
+      hasControls:true
     },
     {
       type: "video/mp4",
@@ -38,6 +41,7 @@ export class VideoEditingComponent {
       isMuted: true,
       isLoop: true,
       isAutoplay: true,
+      hasControls:true
     },
     {
       type: "video/mp4",
@@ -46,6 +50,7 @@ export class VideoEditingComponent {
       isMuted: true,
       isLoop: true,
       isAutoplay: true,
+      hasControls:true
     },
     {
       type: "video/mp4",
@@ -53,6 +58,7 @@ export class VideoEditingComponent {
       isMuted: true,
       isLoop: true,
       isAutoplay: true,
+      hasControls:true
     },
   ];
 
@@ -63,7 +69,8 @@ export class VideoEditingComponent {
       isMuted: true,
       isLoop: true,
       isAutoplay: true,
-      videoPoster: "assets/images/hzs-banner-cover.png"
+      videoPoster: "assets/images/hzs-banner-cover.png",
+      hasControls:true
     },
     {
       type: "video/mp4",
@@ -71,6 +78,7 @@ export class VideoEditingComponent {
       isMuted: true,
       isLoop: true,
       isAutoplay: true,
+      hasControls:true
     },
     {
       type: "video/mp4",
@@ -78,6 +86,7 @@ export class VideoEditingComponent {
       isMuted: true,
       isLoop: true,
       isAutoplay: true,
+      hasControls:true
     },
     {
       type: "video/mp4",
@@ -85,6 +94,7 @@ export class VideoEditingComponent {
       isMuted: true,
       isLoop: true,
       isAutoplay: true,
+      hasControls:true
     },
     {
       type: "video/mp4",
@@ -92,6 +102,7 @@ export class VideoEditingComponent {
       isMuted: true,
       isLoop: true,
       isAutoplay: true,
+      hasControls:true
     },
     {
       type: "video/mp4",
@@ -99,7 +110,8 @@ export class VideoEditingComponent {
       isMuted: true,
       isLoop: true,
       isAutoplay: true,
-      videoPoster: "assets/images/hzs-partners-cover.png"
+      videoPoster: "assets/images/hzs-partners-cover.png",
+      hasControls:true
     },
   ];
 
@@ -110,6 +122,7 @@ export class VideoEditingComponent {
       isMuted: true,
       isLoop: true,
       isAutoplay: true,
+      hasControls:true
     },
     {
       type: "video/mp4",
@@ -117,6 +130,7 @@ export class VideoEditingComponent {
       isMuted: true,
       isLoop: true,
       isAutoplay: true,
+      hasControls:true
     },
     {
       type: "video/mp4",
@@ -124,7 +138,8 @@ export class VideoEditingComponent {
       isMuted: true,
       isLoop: true,
       isAutoplay: true,
-      videoPoster: "assets/images/cover-sala.png"
+      videoPoster: "assets/images/cover-sala.png",
+      hasControls:true
     },
   ];
 }

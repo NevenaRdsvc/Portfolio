@@ -10,7 +10,8 @@
         [autoplay]="videoOption.isAutoplay"
         [loop]="videoOption.isLoop"
         [muted]="videoOption.isMuted"
-        [poster]="videoOption?.videoPoster">
+        [poster]="videoOption?.videoPoster"
+        [attr.controls]="videoOption.hasControls ? true : null">
         <source [src]="videoOption.videoSrc" [type]="videoOption.type">
       </video>
 

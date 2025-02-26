@@ -7,6 +7,7 @@ export interface VideoSection {
   isMuted: boolean;
   isLoop: boolean;
   isAutoplay: boolean;
+  hasControls:boolean;
 }
 
 @Component({
