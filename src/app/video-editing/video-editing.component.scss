@@ -54,12 +54,10 @@
   justify-content: center;
   width: 12%;
   padding-top: 0%;
-  padding-bottom: 190px;
   margin: auto;
 
   @media #{variables.$xs-desktop} {
     width: 20%;
-    margin-bottom: 100px;
   }
 
   @media #{variables.$tablet} {
@@ -68,6 +66,5 @@
 
   @media #{variables.$phone} {
     width: 40%;
-    margin-top: 200px;
   }
 }
