@@ -19,10 +19,6 @@
     height: 400px;
   }
 
-  @media #{variables.$phone} {
-    margin-top: 200px;
-  }
-
   .aurora-image-3 {
     z-index: 1;
     width: 1250px;

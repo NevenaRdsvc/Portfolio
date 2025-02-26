@@ -1,0 +1,22 @@
+<div class="logo">
+  <img [src]="logoUrl" alt="Logo">
+</div>
+
+<div class="wrapper">
+  @for (videoOption of videos; track $index) {
+    <div class="video-wrapper">
+      <video
+        #video
+        [autoplay]="videoOption.isAutoplay"
+        [loop]="videoOption.isLoop"
+        [muted]="videoOption.isMuted"
+        [poster]="videoOption?.videoPoster">
+        <source [src]="videoOption.videoSrc" [type]="videoOption.type">
+      </video>
+
+      @if (videoOption?.videoPoster) {
+        <button (click)="playVideo(video)">PLAY</button>
+      }
+    </div>
+  }
+</div>

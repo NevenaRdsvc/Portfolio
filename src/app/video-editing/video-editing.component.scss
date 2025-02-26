@@ -1,70 +1,7 @@
 @use "../../scss/variables" as variables;
 
 :host {
+  display: flex;
   flex-direction: column;
-}
-
-.video-container video {
-  max-width: 400px;
-  width: 100%;
-  height: auto;
-  border-radius: 60px;
-
-  @media #{variables.$xs-desktop} {
-    max-width: 290px;
-  }
-
-  @media #{variables.$tablet} {
-    max-width: 280px;
-  }
-
-  @media #{variables.$phone} {
-    max-width: 310px;
-  }
-}
-
-.wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: auto;
-  margin-top: -180px;
-  gap: 50px;
-
-  @media #{variables.$xs-desktop} {
-    margin-top: -380px;
-  }
-
-  @media #{variables.$tablet} {
-    margin-top: -380px;
-  }
-
-  @media #{variables.$phone} {
-    flex-direction: column;
-    height: auto;
-    margin-top: 20px;
-    margin-bottom: 0;
-    gap: 20px;
-  }
-}
-
-.logo {
-  display: flex;
-  justify-content: center;
-  width: 12%;
-  padding-top: 0%;
-  margin: auto;
-
-  @media #{variables.$xs-desktop} {
-    width: 20%;
-  }
-
-  @media #{variables.$tablet} {
-    width: 20%;
-  }
-
-  @media #{variables.$phone} {
-    width: 40%;
-  }
+  gap: 30px;
 }
