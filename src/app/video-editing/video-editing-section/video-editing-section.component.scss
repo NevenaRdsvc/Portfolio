@@ -11,34 +11,33 @@
 
 .wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  width: 100%;
+  width: 75%;
   gap: 40px;
 }
 
-.logo {
-  padding: 16px;
-  border: 1px solid var(--accent);
-  border-radius: 20px;
-}
+// .logo {
+//   padding: 16px;
+//   border: 2px solid var(--black);
+//   border-radius: 20px;
+// }
 
 .video-wrapper {
   position: relative;
-  max-width: 400px;
-  width: 100%;
+  width: 30%;
   height: auto;
 
   @media #{variables.$xs-desktop} {
-    max-width: 290px;
+    width: 45%;
   }
 
   @media #{variables.$tablet} {
-    max-width: 280px;
+    width: 48%;
   }
 
   @media #{variables.$phone} {
-    max-width: 310px;
+    width: 100%;
   }
 
   button {
@@ -53,4 +52,10 @@
 video {
   width: 100%;
   border-radius: 60px;
+}
+
+.logo-img {
+  display: block;
+  width: 45%;
+  margin: 0 auto;
 }

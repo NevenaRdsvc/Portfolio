@@ -1,5 +1,5 @@
 <div class="logo">
-  <img [src]="logoUrl" alt="Logo">
+  <img class="logo-img"[src]="logoUrl" alt="Logo">
 </div>
 
 <div class="wrapper">
@@ -14,9 +14,9 @@
         <source [src]="videoOption.videoSrc" [type]="videoOption.type">
       </video>
 
-      @if (videoOption?.videoPoster) {
+      <!-- @if (videoOption?.videoPoster) {
         <button (click)="playVideo(video)">PLAY</button>
-      }
+      } -->
     </div>
   }
 </div>
