@@ -26,7 +26,6 @@
 .video-wrapper {
   position: relative;
   width: 30%;
-  height: auto;
 
   @media #{variables.$xs-desktop} {
     width: 45%;
