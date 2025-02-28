@@ -24,6 +24,10 @@ export const homeRoutes: Routes = [
         path: 'video-editing',
         loadComponent: () => import('../video-editing/video-editing.component').then(c => c.VideoEditingComponent),
       },
+      {
+        path: 'posts',
+        loadComponent: () => import('../posts/posts.component').then(c => c.PostsComponent),
+      },
     ]
   },
 ];

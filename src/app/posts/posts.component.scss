@@ -1,0 +1,41 @@
+@use "../../scss/variables" as variables;
+
+:host {
+  width: 100%;
+
+  @media #{variables.$phone} {
+    padding: 0 80px;
+  }
+
+  @media #{variables.$m-phone} {
+    padding: 0 60px;
+  }
+}
+
+swiper-container {
+  width: 400px;
+  aspect-ratio: 1920 / 2240;
+
+  @media #{variables.$phone} {
+    width: 80%;
+  }
+
+  @media #{variables.$m-phone} {
+    width: 100%;
+  }
+}
+
+swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}

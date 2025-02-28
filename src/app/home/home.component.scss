@@ -54,11 +54,18 @@
   align-items: center;
   gap: 20px;
 
+  @media #{variables.$s-desktop} {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+  }
+
   button {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 180px;
+    height: 60px;
     box-sizing: border-box;
     padding: 20px 16px;
     border: 2px solid var(--accent);

@@ -32,6 +32,13 @@
         (click)="redirect('video-editing')">
         Video Editing
       </button>
+
+      <button
+        [class.active-button]="projectsActiveType === 'posts'"
+        [disabled]="projectsActiveType === 'posts'"
+        (click)="redirect('posts')">
+        Posts
+      </button>
     </div>
   </div>
   <img class="aurora-image-4" src="assets/images/aurora.png" alt="Aurora 2">

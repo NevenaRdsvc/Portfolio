@@ -1,6 +1,8 @@
-import { Component, NgZone, OnInit } from '@angular/core';
+import { AfterViewInit, Component, NgZone, OnInit } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+
+import { register } from 'swiper/element/bundle';
 
 import { environment } from '../environments/environment';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -13,7 +15,7 @@ import { LS_USER_LANGUAGE } from './shared/constants';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
   title(_title: any) {
     throw new Error('Method not implemented.');
   }
@@ -37,5 +39,9 @@ export class AppComponent implements OnInit {
     this.zone.onStable.subscribe(() => {
       this.showLoadingSpinner = false;
     });
+  }
+
+  ngAfterViewInit(): void {
+    register();
   }
 }
