@@ -34,7 +34,6 @@ export class AppComponent implements AfterViewInit {
     }
 
     this.translateService.use(languageToUse);
-    window.onload = () => this.showLoadingSpinner = false;
   }
 
   ngAfterViewInit(): void {
