@@ -18,11 +18,11 @@ swiper-container {
   padding: 20px 0;
 
   @media #{variables.$phone} {
-    width: 80%;
+    width: 70%;
   }
 
   @media #{variables.$m-phone} {
-    width: 100%;
+    width: 80%;
   }
 }
 
