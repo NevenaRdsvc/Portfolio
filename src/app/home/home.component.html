@@ -20,18 +20,18 @@
       </button>
 
       <button
-        [class.active-button]="projectsActiveType === 'illustrations'"
-        [disabled]="projectsActiveType === 'illustrations'"
-        (click)="redirect('illustrations')">
-        Posts & Illustrations
-      </button>
-
-      <button
         [class.active-button]="projectsActiveType === 'video-editing'"
         [disabled]="projectsActiveType === 'video-editing'"
         (click)="redirect('video-editing')">
         Video Editing
       </button>
+
+      <button
+      [class.active-button]="projectsActiveType === 'illustrations'"
+      [disabled]="projectsActiveType === 'illustrations'"
+      (click)="redirect('illustrations')">
+      Games
+    </button>
 
       <button
         [class.active-button]="projectsActiveType === 'posts'"

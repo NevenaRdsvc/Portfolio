@@ -13,8 +13,9 @@
 }
 
 swiper-container {
-  width: 400px;
+  width: 600px;
   aspect-ratio: 1920 / 2240;
+  padding: 20px 0;
 
   @media #{variables.$phone} {
     width: 80%;
