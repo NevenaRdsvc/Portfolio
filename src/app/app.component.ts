@@ -37,6 +37,7 @@ export class AppComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+    this.showLoadingSpinner = false;
     register();
   }
 }
