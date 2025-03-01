@@ -2,3 +2,9 @@
 <main>
   <router-outlet></router-outlet>
 </main>
+
+@if (showLoadingSpinner) {
+  <div class="loading-overlay ">
+    <la-spinner></la-spinner>
+  </div>
+}

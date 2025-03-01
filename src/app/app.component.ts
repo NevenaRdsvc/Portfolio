@@ -7,11 +7,12 @@ import { register } from 'swiper/element/bundle';
 import { environment } from '../environments/environment';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LS_USER_LANGUAGE } from './shared/constants';
+import { SpinnerComponent } from './shared/components/spinner/spinner.component';
 
 @Component({
   selector: 'la-root',
   standalone: true,
-  imports: [RouterOutlet, TranslateModule, NavbarComponent],
+  imports: [RouterOutlet, TranslateModule, NavbarComponent,SpinnerComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
