@@ -1,8 +1,9 @@
-import { AfterViewInit, Component, ElementRef, inject } from '@angular/core';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { CommonModule } from '@angular/common';
-import { trigger, state, style, transition, animate } from '@angular/animations';
-import Typewriter from 'typewriter-effect/dist/core';
+import { AfterViewInit, Component, ElementRef, inject, OnInit } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+
+import Typewriter from 'typewriter-effect/dist/core';
 
 @Component({
   selector: 'la-skill',
@@ -22,23 +23,35 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
     ])
   ]
 })
-export class SkillComponent implements AfterViewInit {
-  private translate = inject(TranslateService);
+export class SkillComponent implements AfterViewInit, OnInit {
   isIntersecting: boolean = false;
-  private observer: IntersectionObserver | null = null;
   currentSkillIndex = 0; 
-  
+
   skills = [
     { name: 'Design', icon: 'assets/images/web-design-icon.png', flip: 'inactive' },
     { name: 'Media Producion', icon: 'assets/images/design-icon.png', flip: 'inactive' },
     { name: 'Development', icon: 'assets/images/coding-icon.png', flip: 'inactive' }
   ];
   
+  private translatedText: string = '';
+  private typewriterWritedOnce: boolean;
+  private translate = inject(TranslateService);
+  private observer: IntersectionObserver | null = null;
 
   constructor(private host: ElementRef) {}
 
+  ngOnInit(): void {
+    this.translatedText = this.translate.instant('labelSkills.skillsTitle');
+    this.translate.onLangChange.subscribe(_ => { 
+      this.translatedText = this.translate.instant('labelSkills.skillsTitle');
+
+      if (this.typewriterWritedOnce) {
+        this.initializeTypewriter();
+      }
+    });
+  }
+
   ngAfterViewInit() {
-  
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -58,17 +71,18 @@ export class SkillComponent implements AfterViewInit {
     const titleElement = document.getElementById('typewriter-title-skills');
 
     if (titleElement) {
-      const translatedText = this.translate.instant('labelSkills.skillsTitle');
-
       new Typewriter(titleElement, {
         loop: false,
         delay: 75,
       })
-        .typeString(translatedText)
+        .typeString(this.translatedText)
         .pauseFor(1000)
         .start();
+
+        this.typewriterWritedOnce = true;
     }
   }
+
   startAutomaticRotation() {
     let skillIndex = 0;
     const totalSkills = this.skills.length;

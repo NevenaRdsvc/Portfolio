@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 import Typewriter from 'typewriter-effect/dist/core';
@@ -12,14 +12,25 @@ import { ExperienceBlockComponent } from './experience-block/experience-block.co
   styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent implements OnInit {
-  private translate = inject(TranslateService);
-  private observer: IntersectionObserver | null = null;
-
   isIntersecting: boolean = false;
 
-  constructor(private host: ElementRef) { }
+  private typewriterWritedOnce: boolean;
+  private translatedText: string = '';
+  private observer: IntersectionObserver | null = null;
+
+  constructor(private host: ElementRef, private translate: TranslateService) { }
 
   ngOnInit() {
+    this.translatedText = this.translate.instant('labelExperience.experience');
+    this.translate.onLangChange.subscribe(_ => { 
+      this.translatedText = this.translate.instant('labelExperience.experience');
+
+      if (this.typewriterWritedOnce) {
+        this.initializeTypewriter();
+      }
+    }
+    );
+
     const options = {
       root: null,
       rootMargin: '-200px',
@@ -46,15 +57,15 @@ export class ExperienceComponent implements OnInit {
     const titleElement = document.getElementById('typewriter-title-experience');
 
     if (titleElement) {
-      const translatedText = this.translate.instant('labelExperience.experience');
-
       new Typewriter(titleElement, {
         loop: false,
         delay: 75,
       })
-        .typeString(translatedText)
+        .typeString(this.translatedText)
         .pauseFor(1000)
         .start();
+
+        this.typewriterWritedOnce = true;
     }
   }
 }

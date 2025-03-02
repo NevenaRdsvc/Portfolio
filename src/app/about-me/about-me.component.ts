@@ -12,7 +12,9 @@ import Typewriter from 'typewriter-effect/dist/core';
 })
 export class AboutMeComponent implements OnInit {
   isIntersecting: boolean = false;
+  typewriterWritedOnce: boolean = false;
 
+  private translatedText: string = '';
   private observer: IntersectionObserver | null = null;
 
   constructor(private host: ElementRef, private translate: TranslateService) {
@@ -20,6 +22,15 @@ export class AboutMeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.translatedText = this.translate.instant('labelMain.aboutMe');
+    this.translate.onLangChange.subscribe(_ => { 
+      this.translatedText = this.translate.instant('labelMain.aboutMe');
+
+      if (this.typewriterWritedOnce) {
+        this.initializeTypewriter();
+      }
+    });
+
     const options = {
       root: null,
       rootMargin: '-200px',
@@ -46,15 +57,15 @@ export class AboutMeComponent implements OnInit {
     const titleElement = document.getElementById('typewriter-title');
 
     if (titleElement) {
-      const translatedText = this.translate.instant('labelMain.aboutMe');
-
       new Typewriter(titleElement, {
         loop: false,
         delay: 75,
       })
-        .typeString(translatedText)
+        .typeString(this.translatedText)
         .pauseFor(1000)
         .start();
+
+        this.typewriterWritedOnce = true;
     }
   }
 }

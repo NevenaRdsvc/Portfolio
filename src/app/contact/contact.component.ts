@@ -1,18 +1,20 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+
 import Typewriter from 'typewriter-effect/dist/core';
-import { ButtonComponent } from '../shared/button/button.component';
 
 @Component({
   selector: 'la-contact',
   standalone:true,
-  imports: [TranslatePipe, ButtonComponent],
+  imports: [TranslatePipe],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent implements OnInit {
   isIntersecting: boolean = false;
 
+  private typewriterWritedOnce: boolean = false;
+  private translatedText: string = '';
   private observer: IntersectionObserver | null = null;
 
   constructor(private host: ElementRef, private translate: TranslateService) {
@@ -20,6 +22,15 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.translatedText = this.translate.instant('labelMain.contact');
+    this.translate.onLangChange.subscribe(_ => { 
+      this.translatedText = this.translate.instant('labelMain.contact');
+
+      if (this.typewriterWritedOnce) {
+        this.initializeTypewriter();
+      }
+    });
+
     const options = {
       root: null,
       rootMargin: '-200px',
@@ -46,15 +57,15 @@ export class ContactComponent implements OnInit {
     const titleElement = document.getElementById('typewriter-title-contact');
 
     if (titleElement) {
-      const translatedText = this.translate.instant('labelMain.contact');
-
       new Typewriter(titleElement, {
         loop: false,
         delay: 75,
       })
-        .typeString(translatedText)
+        .typeString(this.translatedText)
         .pauseFor(1000)
         .start();
+
+        this.typewriterWritedOnce = true;
     }
   }
 }
