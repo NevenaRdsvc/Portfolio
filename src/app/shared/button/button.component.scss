@@ -13,12 +13,20 @@ button {
   border: none;
   border-radius: 30px;
   outline: none;
-  font-family: "Montserrat", serif;
+  font-family: "Satoshi", serif;
   font-size: 20px;
   font-weight: 600;
-  text-transform: uppercase;
   letter-spacing: 1.5px;
   transition: background-color 0.2s;
+
+  ::ng-deep {
+    .ladda-label {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      font-family: "Satoshi", serif;
+    }
+  }
 
   h3 {
     color: white;
@@ -33,10 +41,31 @@ button {
     }
   }
 
+  &.strong-blue {
+    color: var(--white);
+    background-color: var(--strong-blue);
+
+    &:hover {
+      background-color: var(--light-blue);
+    }
+  }
+
   &.accent {
     font-weight: 900;
     color: var(--white);
     background-color: var(--accent);
+
+    &:hover {
+      background-color: var(--accent-20);
+    }
+  }
+
+  &.secondary {
+    width: auto;
+    border: 1px solid var(--black);
+    font-weight: 300;
+    color: var(--black);
+    background-color: transparent;
 
     &:hover {
       background-color: var(--accent-20);

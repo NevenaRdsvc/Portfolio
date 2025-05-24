@@ -9,7 +9,8 @@
     "build:staging": "ng build --configuration=staging",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint && npx stylelint \"**/*.scss\""
+    "lint": "ng lint && npx stylelint \"**/*.scss\"",
+    "postinstall": "patch-package"
   },
   "private": true,
   "dependencies": {
@@ -27,6 +28,7 @@
     "@ngx-translate/core": "^16.0.3",
     "@ngx-translate/http-loader": "^16.0.0",
     "animate.css": "^4.1.1",
+    "animejs": "^4.0.2",
     "ladda": "^2.0.3",
     "rxjs": "~7.8.0",
     "swiper": "^11.2.4",
@@ -42,6 +44,7 @@
     "@angular-eslint/template-parser": "18.4.2",
     "@angular/cli": "^19.0.2",
     "@angular/compiler-cli": "^19.0.0",
+    "@types/animejs": "^3.1.13",
     "@types/jasmine": "~5.1.0",
     "@typescript-eslint/eslint-plugin": "7.11.0",
     "@typescript-eslint/parser": "7.11.0",

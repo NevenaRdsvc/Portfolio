@@ -3,10 +3,10 @@
 :host {
   display: flex;
   flex-direction: column;
-  padding: 0 200px;
+  padding: 0 120px;
 
   @media #{variables.$s-desktop} {
-    padding: 0 120px;
+    padding: 0 100px;
   }
 
   @media #{variables.$xs-desktop} {

@@ -1,54 +1,41 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
-import Typewriter from 'typewriter-effect/dist/core';
+import { ButtonComponent } from '../shared/button/button.component';
+import { UtilityService } from '../shared/services/utility.service';
 
 @Component({
   selector: 'la-hero',
-  imports: [TranslatePipe],
+  imports: [TranslatePipe, ButtonComponent],
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent implements OnInit, AfterViewInit {
+  @ViewChild('projectsButton', { read: ElementRef }) projectsButton: ElementRef;
+  @ViewChild('behanceButtonWrapper', { read: ElementRef }) behanceButtonWrapper: ElementRef;
+
   texts: string[] = ['labelMain.designer', 'labelMain.uiUxDesigner', 'labelMain.graphicDesigner', 'labelMain.videoEditor'];
   translatedTexts: string[] = [];
 
-  constructor(private translate: TranslateService) {}
+  constructor(private translate: TranslateService, private utilityService: UtilityService) { }
 
   ngOnInit(): void {
     this.translatedTexts = this.texts.map(key => this.translate.instant(key));
     this.translate.onLangChange.subscribe(_ => {
       this.translatedTexts = this.texts.map(key => this.translate.instant(key));
-      this.setTypewriter();
     });
-  }
-
-  ngAfterViewInit() {
-    this.setTypewriter();
   }
 
   scrollToSection(sectionId: string) {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   }
 
-  private setTypewriter() {
-    const heroElement = document.getElementById('typewriter-hero');
-      
-    if (heroElement) {
-      const typewriter = new Typewriter(heroElement, {
-        loop: true,
-        delay: 40,
-        deleteSpeed: 50
-      });
+  ngAfterViewInit(): void {
+    this.registerAnimations();
+  }
 
-      this.translatedTexts.forEach((text) => {
-        typewriter
-          .typeString(text)
-          .pauseFor(1000)
-          .deleteAll();
-      });
-
-      typewriter.start();
-    }
+  private registerAnimations() {
+    this.utilityService.addFadeInAnimation(this.projectsButton.nativeElement, -500);
+    // this.utilityService.addFadeInAnimation(this.behanceButtonWrapper.nativeElement, 500);
   }
 }

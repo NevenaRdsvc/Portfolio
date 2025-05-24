@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 import { filter } from 'rxjs';
 import Typewriter from 'typewriter-effect/dist/core';
@@ -11,7 +11,6 @@ import { ExperienceComponent } from '../experience/experience.component';
 import { FooterComponent } from '../footer/footer.component';
 import { HeroComponent } from '../hero/hero.component';
 import { SkillComponent } from '../skill/skill.component';
-import { VideoEditingSectionComponent, VideoSection } from '../video-editing/video-editing-section/video-editing-section.component';
 
 @Component({
   selector: 'la-home',
@@ -22,9 +21,7 @@ import { VideoEditingSectionComponent, VideoSection } from '../video-editing/vid
     HeroComponent,
     FooterComponent,
     ContactComponent,
-    TranslatePipe,
     SkillComponent,
-    VideoEditingSectionComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
@@ -32,59 +29,9 @@ import { VideoEditingSectionComponent, VideoSection } from '../video-editing/vid
 export class HomeComponent implements OnInit {
   projectsActiveType: string = '';
   translatedProjectTitle: string = '';
+
   private typewriterInitialized: boolean = false;
   private observer: IntersectionObserver | null = null;
-
-  landingVideos: VideoSection[] = [
-    {
-      type: "video/mp4",
-      videoSrc: "assets/videos/isidoraGala.mp4",
-      isMuted: true,
-      isLoop: true,
-      isAutoplay: true,
-      hasControls: true
-    },
-    {
-      type: "video/mp4",
-      videoSrc: "assets/videos/rehuba.mp4",
-      isMuted: true,
-      isLoop: true,
-      isAutoplay: true,
-      hasControls: true
-    },
-    {
-      type: "video/mp4",
-      videoSrc: "assets/videos/wst.mp4",
-      isMuted: true,
-      isLoop: true,
-      isAutoplay: true,
-      hasControls: true
-    },
-    {
-      type: "video/mp4",
-      videoSrc: "assets/videos/laraBojanic.mp4",
-      isMuted: true,
-      isLoop: true,
-      isAutoplay: true,
-      hasControls: true
-    },
-    {
-      type: "video/mp4",
-      videoSrc: "assets/videos/harmonijaDuse.mp4",
-      isMuted: true,
-      isLoop: true,
-      isAutoplay: true,
-      hasControls: true
-    },
-    {
-      type: "video/mp4",
-      videoSrc: "assets/videos/leMonde.mp4",
-      isMuted: true,
-      isLoop: true,
-      isAutoplay: true,
-      hasControls: true
-    },
-  ];
 
   constructor(
     private router: Router,

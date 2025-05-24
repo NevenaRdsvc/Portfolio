@@ -1,9 +1,8 @@
 <button class="{{color}}" [bgLadda]="isLoading" [disabled]="disabled" (click)="buttonClick.emit($event)">
+  <ng-content></ng-content>
 
   @if (iconName) {
     <la-icon [size]="iconSize" [color]="iconColor" [iconName]="iconName" [iconVariant]="iconVariant">
     </la-icon>
   }
-
-  <ng-content></ng-content>
 </button>

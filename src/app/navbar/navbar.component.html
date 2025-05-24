@@ -1,18 +1,18 @@
 <nav class="navbar">
   <div class="navbar-container">
     <a href="/" class="navbar-logo">NR</a>
+
     <ul class="navbar-menu">
       <li><a class="navbar-link" (click)="goToSection('aboutMeSection')">{{ 'labelMain.aboutMe' | translate }}</a></li>
+      <li><a class="navbar-link" (click)="goToSection('titleProjects')">{{ 'labelMain.experience' | translate }}</a></li>
       <li><a class="navbar-link" (click)="goToSection('titleProjects')">{{ 'labelMain.projects' | translate }}</a></li>
       <li><a class="navbar-link" (click)="goToSection('typewriter-title-contact')">{{ 'labelMain.contact' | translate }}</a></li>
     </ul>
 
     <div class="language-selector">
-      <span (click)="changeLanguage('en')">ENG</span>
+      <span (click)="changeLanguage('en')">EN</span>
       <span class="divider">|</span>
-      <span (click)="changeLanguage('rs')">RS</span>
-      <span class="divider">|</span>
-      <span (click)="changeLanguage('ger')">GER</span>
+      <span (click)="changeLanguage('ger')">DE</span>
     </div>
   </div>
 </nav>

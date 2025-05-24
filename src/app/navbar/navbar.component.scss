@@ -2,8 +2,7 @@
 
 :host {
   z-index: 2;
-  padding: 20px;
-  margin: 10px 30px;
+  padding: 32px 120px;
 }
 
 .navbar-container {
@@ -15,13 +14,18 @@
 .navbar-logo {
   font-size: 28px;
   font-weight: bold;
-  color: var(--white);
+  color: var(--black);
   text-decoration: none;
 }
 
 .navbar-menu {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  border-radius: 40px;
   list-style: none;
+  background-color: #000000;
   gap: 50px;
 
   @media #{variables.$tablet} {
@@ -56,15 +60,27 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--white);
+  color: var(--black);
 }
 
 .language-selector span {
+  position: relative;
   font-weight: 600;
   cursor: pointer;
   transition: color 0.3s ease;
-}
 
-.language-selector span:hover {
-  color: var(--white);
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--black);
+    transition: width 0.3s ease;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
 }

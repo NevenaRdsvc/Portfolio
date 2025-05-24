@@ -1,13 +1,23 @@
 <div class="text-container">
-  <h1>{{ 'labelMain.hello' | translate }}</h1>
-  <h1 class="name">Nevena Radosavljević</h1>
-  <h1 id="typewriter-hero"></h1>
+  <h1><span class="bold">{{ 'labelMain.hello' | translate }} Nevena Radosavljević </span>your<br>
+    <span class="blue">creative partner</span> for everything from <br>
+    <span class="bold">pixels to motion.</span>
+  </h1>
+  <p>Whether it’s graphic design, UI/UX, web design or editing</p>
 </div>
 
-<img class="aurora-image-1" src="assets/images/aurrora.png" alt="Aurora">
-<!-- <img class="aurora-image-2" src="assets/images/aurora.png" alt="Aurora 2"> -->
+<la-button #projectsButton class="projects-button" color="strong-blue" iconName="arrow_right" [iconVariant]="24" [iconSize]="24" iconColor="white" [isLoading]="false" (buttonClick)="scrollToSection('projects')">
+  <span>
+    {{ 'labelMain.viewProject' | translate }}
+  </span>
+</la-button>
 
-<div class="view-project-button" (click)="scrollToSection('projects')">
-  <p>{{ 'labelMain.viewProject' | translate }}</p>
-  <img src="assets/images/arrow.png" alt="Pointer" class="button-icon">
+<div #behanceButtonWrapper class="behance-button-wrapper">
+  <la-button class="projects-button" color="secondary" iconName="arrow_up_right" [iconVariant]="24" [iconSize]="24" iconColor="black" [isLoading]="false" (buttonClick)="scrollToSection('projects')">
+    <span>
+      Hey, follow Nevena on Behance
+    </span>
+  </la-button>
 </div>
+
+<img class="background-image" src="assets/images/hero-background.png" alt="Aurora">

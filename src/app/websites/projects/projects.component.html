@@ -1,0 +1,59 @@
+<div #heading class="title-wrapper">
+  <la-tag text="h2"></la-tag>
+  <h2>{{'label.projects' | translate}}</h2>
+  <la-tag text="h2" [isClosing]="true"></la-tag>
+</div>
+
+<div class="wrapper">
+  <la-project
+    #sanobot
+    videoUrl="/assets/images/sanobot.png"
+    projectUrl="https://plean.ch/"
+    [isImageOnly]="true"
+    [heading]="'Sanobot'"
+    [description]="'label.pleanDescription' | translate"
+    [tags]="['Angular', 'ASP.NET Core', 'MSSQL', 'EF Core']">
+  </la-project>
+
+  <la-project
+    #idealWedding
+    videoUrl="/assets/videos/idealwedding.webm"
+    projectUrl="https://idealno-vencanje-staging.netlify.app/"
+    [isImageOnly]="true"
+    [heading]="'label.idealWedding' | translate"
+    [description]="'label.idealWeddingDescription' | translate"
+    [tags]="['Angular', 'ASP.NET Core', 'MSSQL', 'Azure']">
+  </la-project>
+
+  <la-project
+    #fonboard
+    videoUrl="/assets/videos/fonboard.webm"
+    projectUrl="https://onboard.fon.bg.ac.rs/"
+    [isImageOnly]="true"
+    [heading]="'label.fonboard' | translate"
+    [description]="'label.fonboardDescription' | translate"
+    [tags]="['Angular', 'Nest', 'PostgreSQL']">
+  </la-project>
+
+  <la-project
+    #brandedGames
+    videoUrl="/assets/videos/brandedgames.webm"
+    projectUrl="https://thebrandedgames.com/"
+    [isImageOnly]="true"
+    [heading]="'label.brandedGames' | translate"
+    [description]="'label.brandedGamesDescription' | translate"
+    [tags]="['Angular', '.NET', 'MSSQL']">
+  </la-project>
+
+  <la-project
+    #c2s
+    videoUrl="/assets/videos/c2s.webm"
+    projectUrl="https://c2s.fonis.rs/"
+    [isImageOnly]="true"
+    [heading]="'label.companiesToStudents' | translate"
+    [description]="'label.companiesToStudentsDescription' | translate"
+    [tags]="['Angular', '.NET', 'Azure']">
+  </la-project>
+</div>
+
+<img #background src="/assets/images/projects-background.png" alt="Background">

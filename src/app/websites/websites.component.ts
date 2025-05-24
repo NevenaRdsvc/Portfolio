@@ -7,6 +7,7 @@ import { MediaComponent } from '../media/media.component';
 import { TicketAppComponent } from '../ticket-app/ticket-app.component';
 import { TitaniumComponent } from '../titanium/titanium.component';
 import { ZenithComponent } from '../zenith/zenith.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @Component({
   selector: 'la-websites',
@@ -18,6 +19,7 @@ import { ZenithComponent } from '../zenith/zenith.component';
     LuckyTravellerComponent,
     CoffeHubComponent,
     TicketAppComponent,
+    ProjectsComponent
   ],
   templateUrl: './websites.component.html',
   styleUrl: './websites.component.scss'

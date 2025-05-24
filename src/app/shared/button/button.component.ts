@@ -16,7 +16,7 @@ export class ButtonComponent {
   color: string = 'primary';
 
   @Input() iconName: string;
-  @Input() iconColor: 'alt' | 'default' | 'accent' | 'white';
+  @Input() iconColor: 'alt' | 'default' | 'accent' | 'white' | 'strong-blue' | 'black';
   @Input() iconOnly: boolean;
   @Input() iconSize: number;
   @Input() iconVariant: number;

@@ -4,10 +4,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 200px;
+  padding: 0 120px;
 
   @media #{variables.$s-desktop} {
-    padding: 0 120px;
+    padding: 0 100px;
   }
 
   @media #{variables.$xs-desktop} {
@@ -95,7 +95,7 @@ h1 {
   padding-bottom: 0;
   padding-left: 45px;
   border-radius: 40px;
-  background: linear-gradient(135deg, #171925 0%, #6407fd 100%);
+  background: #7d8dff;
   transform: rotateY(180deg);
 
   p {

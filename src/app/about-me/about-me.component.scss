@@ -6,10 +6,12 @@
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-  padding: 0 200px;
+  padding: 0 120px;
+  background-image: url("/assets/images/about-me-background.png");
+  background-size: cover;
 
   @media #{variables.$s-desktop} {
-    padding: 0 120px;
+    padding: 0 100px;
   }
 
   @media #{variables.$xs-desktop} {
@@ -30,10 +32,6 @@
   @media #{variables.$tablet} {
     max-width: none;
   }
-}
-
-p {
-  opacity: 0;
 }
 
 .image-me {

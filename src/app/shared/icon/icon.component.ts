@@ -10,7 +10,7 @@ export class IconComponent {
   @Input() iconName: string;
   @Input() iconVariant: number = 24;
   @Input() role: 'icon' | 'button' = 'icon';
-  @Input() color: 'alt' | 'default' | 'accent' | 'gray-text' | 'white' | 'green' = 'default';
+  @Input() color: 'alt' | 'default' | 'accent' | 'gray-text' | 'white' | 'green' | 'strong-blue' | 'black' = 'default';
 
   @Input()
   @HostBinding('style.fontSize.px')

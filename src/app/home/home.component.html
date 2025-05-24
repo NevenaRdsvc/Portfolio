@@ -6,14 +6,9 @@
 
 <la-experience></la-experience>
 
-<h1 id="typewriter-title-projects" class="project-title"></h1>
-<la-video-editing-section
-  [isMediumCard]="true"
-  [videos]="landingVideos">
-</la-video-editing-section>
-
 <div id="projects" class="title-aurora">
-  <!-- <img class="aurora-image-3" src="assets/images/aurora.png" alt="Aurora"> -->
+  <h1 class="project-title">Projects</h1>
+
   <div class="wrapper">
 
     <div class="buttons-wrapper">
@@ -30,13 +25,6 @@
         (click)="redirect('video-editing')">
         Video Editing
       </button>
-
-      <button
-      [class.active-button]="projectsActiveType === 'illustrations'"
-      [disabled]="projectsActiveType === 'illustrations'"
-      (click)="redirect('illustrations')">
-      Games
-    </button>
 
       <button
         [class.active-button]="projectsActiveType === 'posts'"
