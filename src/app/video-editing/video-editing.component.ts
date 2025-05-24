@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { VideoEditingSectionComponent, VideoSection } from './video-editing-section/video-editing-section.component';
 
 @Component({

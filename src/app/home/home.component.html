@@ -2,14 +2,19 @@
 
 <la-about-me></la-about-me>
 
-<la-experience></la-experience>
-
 <la-skill></la-skill>
 
+<la-experience></la-experience>
+
+<h1 id="typewriter-title-projects" class="project-title"></h1>
+<la-video-editing-section
+  [isMediumCard]="true"
+  [videos]="landingVideos">
+</la-video-editing-section>
+
 <div id="projects" class="title-aurora">
-  <img class="aurora-image-3" src="assets/images/aurora.png" alt="Aurora">
+  <!-- <img class="aurora-image-3" src="assets/images/aurora.png" alt="Aurora"> -->
   <div class="wrapper">
-    <h1 id="titleProjects" class="project-title">{{ 'labelMain.projectTitle' | translate }}</h1>
 
     <div class="buttons-wrapper">
       <button
@@ -41,7 +46,7 @@
       </button>
     </div>
   </div>
-  <img class="aurora-image-4" src="assets/images/aurora.png" alt="Aurora 2">
+  <!-- <img class="aurora-image-4" src="assets/images/aurora.png" alt="Aurora 2"> -->
 </div>
 
 <router-outlet></router-outlet>

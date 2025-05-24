@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 
 export interface VideoSection {
   type: string;
@@ -19,6 +19,10 @@ export interface VideoSection {
 export class VideoEditingSectionComponent {
   @Input() logoUrl: string;
   @Input() videos: VideoSection[] = [];
+
+  @Input()
+  @HostBinding('class.medium-card')
+  isMediumCard: boolean = false;
 
   playVideo(video: HTMLVideoElement) {
     video.play();

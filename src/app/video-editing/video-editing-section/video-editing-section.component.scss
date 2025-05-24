@@ -7,13 +7,27 @@
   width: 100%;
   padding: 32px;
   gap: 60px;
+
+  &.medium-card {
+    .wrapper {
+      justify-content: center;
+    }
+
+    .video-wrapper {
+      width: 600px;
+    }
+
+    video {
+      border-radius: 40px;
+    }
+  }
 }
 
 .wrapper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 75%;
+  width: 90%;
   gap: 40px;
 }
 

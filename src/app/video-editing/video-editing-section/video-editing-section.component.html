@@ -1,6 +1,8 @@
-<div class="logo">
-  <img class="logo-img"[src]="logoUrl" alt="Logo">
-</div>
+@if (logoUrl) {
+  <div class="logo">
+    <img class="logo-img"[src]="logoUrl" alt="Logo">
+  </div>
+}
 
 <div class="wrapper">
   @for (videoOption of videos; track $index) {

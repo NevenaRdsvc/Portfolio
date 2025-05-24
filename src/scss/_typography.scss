@@ -1,7 +1,7 @@
 @use "variables" as variables;
 
 body {
-  font-family: "Montserrat", serif;
+  font-family: "Satoshi", sans-serif;
   font-size: 18px;
 }
 
@@ -19,7 +19,7 @@ h1 {
   font-family: "Chonburi", serif;
   font-size: 80px;
   font-weight: 400;
-  color: var(--black);
+  color: var(--white);
 
   @media #{variables.$s-desktop} {
     font-size: 66px;
@@ -38,7 +38,7 @@ h2 {
   font-size: 60px;
   font-weight: 700;
   line-height: 1.1;
-  color: var(--black);
+  color: var(--white);
 
   @media #{variables.$s-desktop} {
     font-size: 46px;
@@ -56,7 +56,7 @@ h2 {
 h3 {
   font-size: 26px;
   line-height: 20px;
-  color: var(--black);
+  color: var(--white);
 
   @media #{variables.$phone} {
     font-size: 18px;
@@ -71,7 +71,7 @@ li {
 p {
   font-size: 20px;
   line-height: 1.6;
-  color: var(--black);
+  color: var(--white);
 
   @media #{variables.$phone} {
     font-size: 15px;
@@ -80,7 +80,7 @@ p {
 }
 
 a {
-  color: var(--black);
+  color: var(--white);
   text-decoration: none;
   cursor: pointer;
 
