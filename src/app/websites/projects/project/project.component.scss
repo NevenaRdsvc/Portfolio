@@ -5,6 +5,11 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  width: 100%;
+
+  @media #{variables.$wide-desktop} {
+    width: 70%;
+  }
 
   &:hover {
     cursor: pointer;
@@ -13,25 +18,31 @@
 
 .project {
   position: relative;
-  width: 760px;
-  height: 340px;
+  width: 100%;
+  height: 500px;
   overflow: hidden;
 
+  @media #{variables.$ultra-wide-desktop} {
+    height: 440px;
+  }
+
   @media #{variables.$xxl-desktop} {
-    width: 675px;
-    height: auto;
+    height: 360px;
   }
 
   @media #{variables.$xl-desktop} {
-    width: 780px;
+    height: 320px;
   }
 
-  @media #{variables.$tablet} {
-    width: 100%;
+  @media #{variables.$s-desktop} {
+    height: 280px;
+  }
+
+  @media #{variables.$xs-desktop} {
+    height: auto;
   }
 
   @media #{variables.$wide-desktop} {
-    width: 1000px;
     height: auto;
   }
 
@@ -41,7 +52,7 @@
     top: 0;
     left: 0;
     z-index: 1;
-    width: 80%;
+    width: 100%;
     height: 100%;
     border-radius: 12px;
     background-color: black;
@@ -54,19 +65,11 @@
   }
 
   img {
-    width: 80%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 12px;
     transition: opacity 0.5s;
-
-    @media #{variables.$xxl-desktop} {
-      height: 287px;
-    }
-
-    @media #{variables.$xl-desktop} {
-      height: 100%;
-    }
 
     @media #{variables.$wide-desktop} {
       border-radius: 22px;
@@ -108,6 +111,10 @@
         border-radius: 30px;
         color: var(--white);
         background-color: var(--strong-blue);
+
+        @media #{variables.$s-desktop} {
+          font-size: 15px;
+        }
       }
     }
   }
@@ -118,7 +125,7 @@
   animation: fadeInUp;
   animation-duration: 0.5s;
 
-  @media #{variables.$xl-desktop} {
+  @media #{variables.$xs-desktop} {
     display: none !important;
   }
 }
@@ -129,7 +136,7 @@
   flex-direction: column;
   gap: 12px;
 
-  @media #{variables.$xl-desktop} {
+  @media #{variables.$xs-desktop} {
     display: flex !important;
   }
 
@@ -142,6 +149,10 @@
 
   span {
     color: var(--white);
+
+    @media #{variables.$xs-desktop} {
+      color: var(--black);
+    }
   }
 
   .tags-wrapper {
@@ -158,7 +169,7 @@
       padding: 8px 24px;
       border-radius: 30px;
       color: var(--white);
-      background-color: var(--alt);
+      background-color: var(--strong-blue);
     }
   }
 }

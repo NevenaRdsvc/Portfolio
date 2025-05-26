@@ -6,6 +6,8 @@
   flex-direction: column;
   height: calc(100dvh - 100px);
   padding: 120px 120px 0;
+  background-image: url("/assets/images/hero-background.png");
+  background-size: cover;
 
   @media #{variables.$s-desktop} {
     padding: 0 120px;
@@ -78,22 +80,6 @@ la-button {
   la-button {
     justify-content: flex-end;
   }
-}
-
-.background-image {
-  position: absolute;
-  top: -25%;
-  left: 0%;
-  z-index: 1;
-  width: 100vw;
-  height: 125%;
-
-  // @media #{variables.$m-phone} {
-  //   top: 16%;
-  //   right: -140%;
-  //   width: 1025px;
-  //   transform: rotate(-42.66deg);
-  // }
 }
 
 .view-project-button {

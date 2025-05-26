@@ -4,6 +4,11 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  padding: 0 120px;
+
+  @media #{variables.$xs-desktop} {
+    padding: 0 80px;
+  }
 }
 
 h2 {
@@ -17,10 +22,10 @@ h2 {
 
 .wrapper {
   display: grid;
+  justify-items: center;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
   margin-top: 60px;
-  justify-items: center;
   row-gap: 20px;
   column-gap: 20px;
 
@@ -32,13 +37,26 @@ h2 {
     row-gap: 20px;
   }
 
-  @media #{variables.$xl-desktop} {
+  @media #{variables.$xs-desktop} {
     grid-template-columns: 1fr;
   }
 
   @media #{variables.$l-desktop} {
     row-gap: 20px;
     column-gap: 20px;
+  }
+
+  @media #{variables.$wide-desktop} {
+    row-gap: 60px;
+    column-gap: 60px;
+
+    .flex-start {
+      justify-self: start;
+    }
+
+    .flex-end {
+      justify-self: end;
+    }
   }
 }
 
