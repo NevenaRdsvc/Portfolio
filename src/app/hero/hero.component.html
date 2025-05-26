@@ -3,7 +3,7 @@
     <span class="blue">creative partner</span> for everything from <br>
     <span class="bold">pixels to motion.</span>
   </h1>
-  <p>Whether it’s graphic design, UI/UX, web design or editing</p>
+  <p class="description-text">Whether it’s graphic design, UI/UX, web design or editing</p>
 </div>
 
 <la-button #projectsButton class="projects-button" color="strong-blue" iconName="arrow_right" [iconVariant]="24" [iconSize]="24" iconColor="white" [isLoading]="false" (buttonClick)="scrollToSection('projects')">
@@ -12,12 +12,26 @@
   </span>
 </la-button>
 
-<div #behanceButtonWrapper class="behance-button-wrapper">
-  <la-button class="projects-button" color="secondary" iconName="arrow_up_right" [iconVariant]="24" [iconSize]="24" iconColor="black" [isLoading]="false" (buttonClick)="scrollToSection('projects')">
+<a
+  href="https://www.behance.net/nevenaradosav1"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="behance-button-wrapper"
+>
+  <la-button
+    class="projects-button"
+    color="secondary"
+    iconName="arrow_up_right"
+    [iconVariant]="24"
+    [iconSize]="24"
+    iconColor="black"
+    [isLoading]="false"
+  >
     <span>
       Hey, follow Nevena on Behance
     </span>
   </la-button>
-</div>
+</a>
+
 
 <img class="background-image" src="assets/images/hero-background.png" alt="Aurora">

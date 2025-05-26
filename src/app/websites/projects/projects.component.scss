@@ -21,15 +21,15 @@ h2 {
   width: 100%;
   margin-top: 60px;
   justify-items: center;
-  row-gap: 40px;
-  column-gap: 40px;
+  row-gap: 20px;
+  column-gap: 20px;
 
   @media #{variables.$xxl-desktop} {
-    row-gap: 40px;
+    row-gap: 20px;
   }
 
   @media #{variables.$laptop} {
-    row-gap: 40px;
+    row-gap: 20px;
   }
 
   @media #{variables.$xl-desktop} {
@@ -37,8 +37,8 @@ h2 {
   }
 
   @media #{variables.$l-desktop} {
-    row-gap: 60px;
-    column-gap: 60px;
+    row-gap: 20px;
+    column-gap: 20px;
   }
 }
 
@@ -47,7 +47,7 @@ img {
   top: -80%;
   left: -10%;
   z-index: 1;
-  width: 110vw;
+  width: 100vw;
   object-fit: cover;
 
   @media #{variables.$l-desktop} {

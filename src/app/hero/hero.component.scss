@@ -86,7 +86,8 @@ la-button {
   left: 0%;
   z-index: 1;
   width: 1920px;
-  height: 1080px;
+
+  // height: 1080px;
 
   // @media #{variables.$m-phone} {
   //   top: 16%;
@@ -100,8 +101,9 @@ la-button {
   z-index: 2;
   display: flex;
   align-items: center;
-  height: 80px;
+  height: 85px;
   padding: 20px;
+  font-size: 20px;
   background-color: #bfacfa;
   cursor: pointer;
   align-self: flex-end;
