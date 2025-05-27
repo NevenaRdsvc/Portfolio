@@ -59,6 +59,10 @@
     width: 320px;
     height: 250px;
   }
+
+  @media #{variables.$m-phone} {
+    width: 100%;
+  }
 }
 
 .tp-box-side {

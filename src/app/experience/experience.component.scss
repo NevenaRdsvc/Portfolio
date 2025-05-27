@@ -21,8 +21,5 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-
-  @media #{variables.$phone} {
-    margin-bottom: 150px;
-  }
+  padding-bottom: 40px;
 }

@@ -6,8 +6,6 @@
   flex-direction: column;
   height: calc(100dvh - 100px);
   padding: 120px 120px 0;
-  background-image: url("/assets/images/hero-background.png");
-  background-size: cover;
 
   @media #{variables.$s-desktop} {
     padding: 0 120px;
@@ -18,7 +16,9 @@
   }
 
   @media #{variables.$tablet} {
+    height: auto;
     padding: 0 40px;
+    padding-bottom: 40px;
   }
 }
 
@@ -56,6 +56,12 @@
 
   p {
     font-size: 24px;
+    text-align: left;
+
+    @media #{variables.$phone} {
+      font-size: 22px;
+      line-height: 1.2;
+    }
   }
 
   .name {
@@ -70,6 +76,10 @@ la-button {
 
 .projects-button {
   margin-top: 60px;
+
+  @media #{variables.$phone} {
+    margin-top: 32px;
+  }
 }
 
 .behance-button-wrapper {
@@ -109,5 +119,11 @@ la-button {
   p {
     font-weight: 900;
     color: var(--black);
+  }
+}
+
+.desktop-only {
+  @media #{variables.$phone} {
+    display: none;
   }
 }

@@ -9,6 +9,10 @@
   @media #{variables.$xs-desktop} {
     padding: 0 80px;
   }
+
+  @media #{variables.$m-phone} {
+    padding: 0 20px;
+  }
 }
 
 h2 {
