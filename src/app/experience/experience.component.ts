@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 
-
-
+import { UtilityService } from '../shared/services/utility.service';
 import { ExperienceBlockComponent } from './experience-block/experience-block.component';
 
 @Component({
@@ -11,6 +10,16 @@ import { ExperienceBlockComponent } from './experience-block/experience-block.co
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss']
 })
-export class ExperienceComponent {
-  constructor() { }
+export class ExperienceComponent implements AfterViewInit {
+  @ViewChild('heading', { read: ElementRef }) heading: ElementRef;
+
+  constructor(private utilityService: UtilityService) { }
+
+  ngAfterViewInit(): void {
+    this.registerAnimations();
+  }
+
+  private registerAnimations() {
+    this.utilityService.addFadeInAnimation(this.heading.nativeElement, -500);
+  }
 }

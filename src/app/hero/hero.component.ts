@@ -11,6 +11,7 @@ import { UtilityService } from '../shared/services/utility.service';
   styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent implements OnInit, AfterViewInit {
+  @ViewChild('introText', { read: ElementRef }) introText: ElementRef;
   @ViewChild('projectsButton', { read: ElementRef }) projectsButton: ElementRef;
   @ViewChild('behanceButtonWrapper', { read: ElementRef }) behanceButtonWrapper: ElementRef;
 
@@ -36,6 +37,7 @@ export class HeroComponent implements OnInit, AfterViewInit {
 
   private registerAnimations() {
     this.utilityService.addFadeInAnimation(this.projectsButton.nativeElement, -500);
-    // this.utilityService.addFadeInAnimation(this.behanceButtonWrapper.nativeElement, 500);
+    this.utilityService.addFadeInAnimation(this.behanceButtonWrapper.nativeElement, 500);
+    this.utilityService.addFadeInAnimation(this.introText.nativeElement, -500);
   }
 }
