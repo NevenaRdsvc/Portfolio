@@ -1,4 +1,10 @@
-<h1 #heading>Experience</h1>
+<h1 #heading>{{ 'labelMain.experience' | translate }}</h1>
+
+<div class="wrapper">
+  <la-experience-block
+    [title]="'labelExperience.amadeoTitle' | translate"
+    [description]="'labelExperience.amadeoText' | translate">
+  </la-experience-block>
 
 <div class="wrapper">
   <la-experience-block

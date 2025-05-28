@@ -10,8 +10,18 @@
 .hero-about-me-wrapper {
   display: flex;
   flex-direction: column;
-  background-image: url("/assets/images/hero-about-background.png");
+
+  // background-image: url("/assets/images/test.gif");
   background-size: cover;
+
+  img {
+    width: 60%;
+  }
+
+  @media #{variables.$phone} {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 
 .title-aurora {

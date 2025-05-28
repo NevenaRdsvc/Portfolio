@@ -9,11 +9,11 @@
 }
 
 .email-highlight {
-  color: var(--accent);
+  color: var(--strong-blue);
 }
 
 .phone-highlight {
-  color: var(--accent);
+  color: var(--strong-blue);
 }
 
 p {
@@ -32,7 +32,7 @@ p {
   border: none;
   border-radius: 40px;
   outline: none;
-  background-color: var(--accent);
+  background-color: var(--strong-blue);
 
   h3 {
     font-size: 19px;

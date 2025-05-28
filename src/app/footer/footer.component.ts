@@ -1,10 +1,11 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 import { UtilityService } from '../shared/services/utility.service';
 
 @Component({
   selector: 'la-footer',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
